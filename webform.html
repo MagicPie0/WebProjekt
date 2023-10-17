@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style_webform.css">
+    <link rel="stylesheet" type="text/css" href="popup.css">
+    <title>Webform</title>
+
+    <script>
+        function openForm(){
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm(){
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+
+</head>
+<body>
+    <header>
+
+        <div id="logo" title="Logo">
+
+        </div>
+
+        <div id="banner-content">
+
+            <a href="index.html"><h1 title="Header">HTML5 - CSS3 Projekt<br>&#171;header&#187;</h1></a>
+
+        </div>
+        
+    </header>
+
+    <div id="container">
+        <nav>
+
+            <h2 title="Nav">&#171;nav&#187;</h2>
+
+            <div id="menu">
+                
+                <ul>
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="#nogo" class="more_button">Több oldal</a>
+
+                        <ul>
+
+                            <li><a href="beating_heart.html">Animált szív</a></li>
+                            <li><a href="webform.html">Űrlap</a></li>
+                            
+                        </ul>
+                    </li>
+                    <!--Projekt munka-->
+                    <li><a href="#nogo" class="media_button">Media</a>
+
+                        <ul class="inside_media_button">
+
+                            <li><a href="galery.html">Képgaléria</a></li>
+                            <li><a href="video.html">Videó / Audió</a></li>
+
+                        </ul>
+
+                    </li>
+                    <!--Projekt munka-->
+                </ul>
+
+            </div>
+
+        </nav>
+    
+        <section>
+
+            <h2 title="Section">&#171;section&#187;</h2>
+
+            <article>
+
+                <h2 title="Article">&#171;article&#187;</h2>
+
+                <div class="center">
+
+                    <h2 title="Pizza rendelő űrlap">Pizza rendelés</h2>
+
+                    <form name="rendeles">
+
+                        <fieldset>
+                            <legend>Megrendelő adatai</legend>
+                                <p>
+                                    <label>Név:
+                                    <input type="text" name="nev"><small>Vezetéknév/Keresztnév</small>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>Telefonszám:
+                                    <input type="tel" name="telefon">
+                                    </label>
+                                </p>  
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Pizza mérete</legend>
+                                <p>
+                                    <label>Kicsi: 
+                                        <input type="radio" name="meret" value="kicsi">
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>Nagy: 
+                                        <input type="radio" name="meret" value="nagy">
+                                    </label>
+                                </p>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Feltétek</legend>
+                                <p>
+                                    <label>
+                                        <input type="checkbox" name="feltet1" value="sonka" checked>Sonka
+                                    </label>
+                                </p>
+
+                                <p>
+                                    <label>
+                                        <input type="checkbox" name="feltet2" value="sajt">Sajt
+                                    </label>
+                                </p>
+
+                                <p>
+                                    <label>
+                                        <input type="checkbox" name="feltet3">Gomba
+                                    </label>
+                                </p>
+                        </fieldset>
+
+                        <p>
+                            <label>Mennyiség:
+                                <input type="number" name="mennyiseg">
+                            </label>
+                        </p>
+
+                        <p>
+                            <label>Kért szállítási idő:
+                                <input type="date" name="kiszallitas">
+                            </label>
+                        </p>
+
+                        <p>
+                            <label>Egyéb kívánságok: 
+                                <textarea name="egyeb"></textarea>
+                            </label>
+                        </p>
+
+                        <input type="reset" name="vissza_allitas">
+                        <input type="submit" value="Küldés">
+                    </form>
+
+                </div>
+            
+                </article>
+        </section>
+
+    </div>
+
+    <footer>
+
+        <h2 title="Footer">&#171;footer&#187;</h2>
+
+    </footer>
+
+    <button class="open-button" onclick="openForm()">Open Form</button>
+
+    <div class="form-popup" id="myForm">
+        <form class="form-container">
+
+            <h1>Login</h1>
+
+            <label><b>Email:</b></label>
+            <input type="text" name="email" placeholder="Enter email">
+                
+            <label><b>Password:</b></label>
+            <input type="password" name="psw" placeholder="Enter password">
+                
+            <button type="submit" class="btn">Login</button>
+                
+            <button type="button" class="btn" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+</body>
+</html>
